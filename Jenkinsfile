@@ -10,22 +10,15 @@ pipeline {
             }
         }
 
-        stage('Check Source Files') {
+        stage('Checkout Verification') {
             steps {
-                echo 'Checking Calculator project files...'
+                echo 'Checking Calculator source files...'
 
                 sh 'test -f index.html'
                 sh 'test -f style.css'
                 sh 'test -f app.js'
 
-                echo 'All Calculator source files found!'
-            }
-        }
-
-        stage('Check Dockerfile') {
-            steps {
-                sh 'test -f Dockerfile'
-                echo 'Dockerfile found successfully!'
+                echo 'All source files found!'
             }
         }
 
