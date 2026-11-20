@@ -10,15 +10,15 @@ pipeline {
             }
         }
 
-        stage('Checkout Verification') {
+        stage('Check Source Files') {
             steps {
-                echo 'Checking Calculator source files...'
+                echo 'Checking Calculator files...'
 
                 sh 'test -f index.html'
                 sh 'test -f style.css'
                 sh 'test -f app.js'
 
-                echo 'All source files found!'
+                echo 'All Calculator source files found!'
             }
         }
 
